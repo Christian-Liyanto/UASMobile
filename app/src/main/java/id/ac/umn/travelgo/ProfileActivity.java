@@ -88,5 +88,8 @@ public class ProfileActivity extends AppCompatActivity {
     void deleteAccountUser(String namaPengguna){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(namaPengguna);
         reference.removeValue();
+        Intent logout = new Intent(getApplicationContext(), MainActivity.class);
+        logout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(logout);
     }
 }

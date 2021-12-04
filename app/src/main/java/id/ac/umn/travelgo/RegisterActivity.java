@@ -22,7 +22,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText username1, email, password1, confirmPassword;
     Button signup1, cancelsignup;
-    UserHelperClass DB;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -43,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -81,6 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.makeText(RegisterActivity.this, "Akun pengguna berhasil teregister!!", Toast.LENGTH_SHORT).show();
 
                                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                             startActivity(intent);
                                         }
                                     }

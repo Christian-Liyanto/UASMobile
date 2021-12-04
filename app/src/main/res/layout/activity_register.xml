@@ -30,6 +30,7 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:inputType="text"
             android:hint="Username" />
 
         <EditText
@@ -37,6 +38,7 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"
             android:hint="Email" />
 
         <EditText
