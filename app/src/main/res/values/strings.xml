@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TravelGo</string>
+    <string-array name="hotelname">
+        <item>Hotel A</item>
+        <item>Hotel B</item>
+        <item>Hotel C</item>
+        <item>Hotel D</item>
+        <item>Hotel E</item>
+        <item>Hotel F</item>
+        <item>Hotel G</item>
+        <item>Hotel H</item>
+        <item>Hotel I</item>
+        <item>Hotel J</item>
+    </string-array>
+</resources>
