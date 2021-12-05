@@ -39,26 +39,20 @@
             android:layout_marginBottom="40dp"
             android:text="Password  : "
             android:textSize="20dp" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/editProfile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/deleteacc"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Delete Account" />
     </LinearLayout>
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/editProfile"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/deleteacc"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Delete Account"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,6 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
-        home = (TextView) findViewById(R.id.HOME);
         profile = (ImageButton) findViewById(R.id.profileUser);
         history = (ImageButton) findViewById(R.id.bookingHistory);
         instance = this;
@@ -51,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setAdapter(hotelAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        home.setText("Selamat Datang "+username);
+        Toast.makeText(HomeActivity.this, "Selamat Datang "+username, Toast.LENGTH_SHORT).show();
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override

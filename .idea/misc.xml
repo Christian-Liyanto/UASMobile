@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_edit_profile.xml" value="0.12681159420289856" />
-        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_main.xml" value="0.15489130434782608" />
+        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_pemesanan.xml" value="0.25" />
-        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_profile.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_profile.xml" value="0.16" />
+        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_register.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/activity_validasi_booking.xml" value="0.25" />
         <entry key="..\:/Users/user/Desktop/Tugas Kuliah/Semester 5/Mobile Application Programming Lab/Tugas-Akhir-master/app/src/main/res/layout/hotelrow.xml" value="0.33" />
       </map>
     </option>

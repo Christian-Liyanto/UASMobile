@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ValidasiBooking"
+    android:background="@color/appTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/namaPemesan"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pemesan : Nama User"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/namaHotelPemesan"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel : Nama Hotel"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/jumlahKamarPemesan"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Kamar : 0 Ruangan"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/lamaPemesanan"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lama Hari : 0 Hari"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/hargaPemesanan"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Harga : Rp.xxxxxxx"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:id="@+id/btnvalidasiBooking"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Validasi Booking" />
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btnbatalValidasi"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Batal Validasi" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

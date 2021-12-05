@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.ac.umn.travelgo">
+    package="id.ac.umn.travelgo" >
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TravelGo">
+        android:theme="@style/Theme.TravelGo" >
+        <activity
+            android:name=".ValidasiBooking"
+            android:exported="true" />
         <activity
             android:name=".PemesananActivity"
-            android:parentActivityName=".HomeActivity"
+            android:exported="true"
             android:label="Pemesanan"
-            android:exported="true" />
+            android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".EditProfileActivity"
             android:exported="true" />
@@ -28,7 +31,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
