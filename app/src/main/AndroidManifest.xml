@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelGo">
         <activity
+            android:name=".PemesananActivity"
+            android:parentActivityName=".HomeActivity"
+            android:label="Pemesanan"
+            android:exported="true" />
+        <activity
             android:name=".EditProfileActivity"
             android:exported="true" />
         <activity
@@ -31,4 +36,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

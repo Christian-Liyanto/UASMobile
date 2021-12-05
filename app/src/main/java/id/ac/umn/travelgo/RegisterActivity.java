@@ -64,48 +64,51 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Harap untuk mengisi field berikut !!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if(Patterns.EMAIL_ADDRESS.matcher(em).matches()){
-                        if(pass.length() >= 6){
-                            if(pass.equals(repass)){
-
-                                Query uniqueUser = reference.orderByChild("username").equalTo(user);
-                                uniqueUser.addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if(snapshot.exists()){
-                                            username1.setError("Username sudah terdarfar silahkan gunakan username lain!!");
-                                        }
-                                        else{
-                                            UserHelperClass helperClass = new UserHelperClass(user, em, pass, repass);
-                                            reference.child(user).setValue(helperClass);
-                                            Toast.makeText(RegisterActivity.this, "Akun pengguna berhasil teregister!!", Toast.LENGTH_SHORT).show();
-
-                                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                            startActivity(intent);
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
-                            }
-                            else{
-                                confirmPassword.setError("Confirm Password tidak sama dengan Password!!");
-                            }
-                        }
-                        else {
-                            password1.setError("Password setidaknya terdiri dari 6 kata/angka !!");
-                        }
-
+                    if(user.contains(" ")){
+                        username1.setError("Username tidak boleh mengandung spasi");
                     }
                     else {
-                        email.setError("Email yang diinput tidak valid!!");
+                        if (Patterns.EMAIL_ADDRESS.matcher(em).matches()) {
+                            if (pass.length() >= 6) {
+                                if (pass.equals(repass)) {
+
+                                    Query uniqueUser = reference.orderByChild("username").equalTo(user);
+                                    uniqueUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists()) {
+                                                username1.setError("Username sudah terdarfar silahkan gunakan username lain!!");
+                                            } else {
+                                                UserHelperClass helperClass = new UserHelperClass(user, em, pass, repass);
+                                                reference.child(user).setValue(helperClass);
+                                                Toast.makeText(RegisterActivity.this, "Akun pengguna berhasil teregister!!", Toast.LENGTH_SHORT).show();
+
+                                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                startActivity(intent);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                    });
+                                } else {
+                                    confirmPassword.setError("Confirm Password tidak sama dengan Password!!");
+                                }
+                            } else {
+                                password1.setError("Password setidaknya terdiri dari 6 kata/angka !!");
+                            }
+
+                        } else {
+                            email.setError("Email yang diinput tidak valid!!");
+                        }
                     }
                 }
             }
         });
     }
 }
+// Script By Christian Liyanto - 00000033739
+// Script By Adipta Muhammad - 00000034712
