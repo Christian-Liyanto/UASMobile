@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfileActivity">
+    tools:context=".EditProfileActivity"
+    android:background="@color/appTheme">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -36,7 +37,7 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Confirma Password"
+            android:hint="Confirm Password"
             android:inputType="textPassword"/>
     </LinearLayout>
 

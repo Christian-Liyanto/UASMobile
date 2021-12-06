@@ -7,11 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Random;
 
 public class ValidasiBooking extends AppCompatActivity {
 
     TextView pemesan, hotel, jumlah, lama, total;
-    String user, namahotel, kamar, hari, harga;
+    String user, namahotel, kamar, hari, harga, id;
     Button validasiBooking, batalValidasi;
 
     @Override
@@ -39,6 +45,18 @@ public class ValidasiBooking extends AppCompatActivity {
         jumlah.setText("Jumlah Kamar : "+kamar+" Ruangan");
         lama.setText("Lama Hari : "+hari+" Hari");
         total.setText("Total Harga : Rp."+harga);
+
+        validasiBooking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("booking");
+                int random = new Random().nextInt(1000);
+                id = String.valueOf(random)+user+namahotel+String.valueOf(random);
+                bookingHelperClass helperClass = new bookingHelperClass(user, id, harga, namahotel);
+                reference.child(user).child(id).setValue(helperClass);
+                finish();
+            }
+        });
 
         batalValidasi.setOnClickListener(new View.OnClickListener() {
             @Override

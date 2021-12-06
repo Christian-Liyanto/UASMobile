@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@color/appTheme">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,6 +15,17 @@
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/avatar"
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/profileUsername"
@@ -42,17 +54,33 @@
 
         <Button
             android:layout_marginTop="20dp"
+            android:id="@+id/imageButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ambil Foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+        <Button
+            android:layout_marginTop="20dp"
             android:id="@+id/editProfile"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Edit Profile" />
+            android:text="Edit Profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
         <Button
             android:layout_marginTop="20dp"
             android:id="@+id/deleteacc"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Delete Account" />
+            android:text="Delete Account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
